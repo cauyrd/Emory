@@ -1,0 +1,1 @@
+epd_python get_unused_read.py nrsf.h1.rep1.hpeak.bed reliable.bam /scratch/bioinfo2/chipseq-denovo/single-end/rawdata/NRSF/nrsf_h1.fa /scratch/bioinfo2/chipseq-denovo/single-end/rawdata/NRSF/nrsf_h1_unused.fasta
