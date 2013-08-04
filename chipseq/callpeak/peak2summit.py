@@ -1,3 +1,4 @@
+#this program generate peak summit heatmap file like tss file.
 #input is hpeak.out file
 import sys
 import numpy as np
@@ -9,5 +10,6 @@ for i,line in enumerate(ifp):
 	start = int(item[1])+int(np.round(float(item[4])))
 	end = start+1
 	name = 'peak'+str(i)
+	score = item[-1]
 	strand = '+'
-	print >> ofp, chr+'\t'+str(start)+'\t'+str(end)+'\t'+name+'\t'+strand
+	print >> ofp, chr+'\t'+str(start)+'\t'+str(end)+'\t'+name+'\t'+score+'\t'+strand
