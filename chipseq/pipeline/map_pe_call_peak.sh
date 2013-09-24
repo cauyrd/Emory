@@ -33,7 +33,7 @@ sort -k4,4 $SAM_PREFIX.unique.bed > $SAM_PREFIX.unique.sorted
 epd_python /scratch/bioinfo2/ryang24/NGStoolbox/chipseq/pipeline/get_pair_end.py $SAM_PREFIX.unique.sorted
 epd_python /scratch/bioinfo2/ryang24/NGStoolbox/chipseq/pipeline/trim.py $SAM_PREFIX.unique.sorted.pe.bed 0.5
 mv $SAM_PREFIX.unique.sorted.pe.bed.trimmed.bed $SAM_PREFIX.unique.bed
-rm $SAM_PREFIX.unique.sorted.pe.bed
+rm $SAM_PREFIX.unique.sorted.pe.bed $SAM_PREFIX.unique.sorted
 
 # Generate coverage TDF file for IGV
 igvtools count $SAM_PREFIX.unique.bam $SAM_PREFIX.unique.cov.tdf hg19
